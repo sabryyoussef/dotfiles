@@ -68,3 +68,9 @@ alias up18e="$ODOO18/odoo-bin -c $ODOO18/odoo18e.conf -u all"
 alias up19e="$ODOO19/odoo-bin -c $ODOO19/odoo19e.conf -u all"
 
 echo "✅ Odoo aliases loaded (Community + Enterprise: versions 16, 17, 18, 19)"
+
+# Database management shortcuts
+alias mkdb='create_odoo_env'
+alias envdb='use_odoo_env'
+alias listdb='list_odoo_dbs'
+alias dropdb='drop_odoo_env'

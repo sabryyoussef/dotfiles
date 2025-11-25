@@ -20,5 +20,9 @@ append_once "if [ -f \"$DOTFILES_DIR/shell/odoo_aliases.sh\" ]; then source \"$D
 append_once "# Load Git custom settings" "$HOME/.bashrc"
 append_once "if [ -f \"$DOTFILES_DIR/shell/git_config.sh\" ]; then source \"$DOTFILES_DIR/shell/git_config.sh\"; fi" "$HOME/.bashrc"
 
+# Load Odoo database tools
+append_once "# Load Odoo database tools" "$HOME/.bashrc"
+append_once "if [ -f \"$DOTFILES_DIR/shell/odoo_db_tools.sh\" ]; then source \"$DOTFILES_DIR/shell/odoo_db_tools.sh\"; fi" "$HOME/.bashrc"
+
 echo "✅ Dotfiles configuration installed successfully!"
 echo "💡 Run 'source ~/.bashrc' to apply changes immediately"
