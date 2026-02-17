@@ -183,3 +183,75 @@ MIT License - Feel free to customize for your needs!
 ---
 
 **💡 Pro Tip:** This setup is idempotent - you can run `install.sh` multiple times safely!
+
+## 🔐 SSH Configuration
+
+SSH config file is included in this dotfiles repo for syncing across machines.
+
+### Setup SSH Config
+
+After cloning the dotfiles repo:
+
+```bash
+# Create symbolic link
+ln -sf ~/dotfiles/.ssh/config ~/.ssh/config
+
+# Set proper permissions
+chmod 600 ~/.ssh/config
+```
+
+### Available SSH Hosts
+
+**GitHub Accounts:**
+- `github.com` - Main account (sabryyoussef)
+- `github-f360` - F360 account
+- `github.com-grant` - Grant demo account
+
+**Production Servers:**
+- `freezoners` - Freezoners server (165.22.244.63)
+- `edafa` - Edafa server (216.70.76.85)
+- `smart-view` - Smart View Odoo server (72.167.51.235:40013)
+- `alshmoukh` - Alshmoukh Odoo 19 Enterprise (160.153.184.188:3322)
+- `elkaleej` - El Kaleej Manufacturing (208.109.229.216:3322)
+
+**Docker Servers:**
+- `openclaw` - OpenClaw main (139.59.250.102)
+- `openclow_docker` - OpenClow Docker server (143.198.206.226)
+- `2openclow_docker` - OpenClow Docker 2 (165.22.54.172)
+- `digitalocean` - DigitalOcean server (139.59.250.102)
+
+**Local Network:**
+- `sabrylabtop` - Local laptop (192.168.100.61)
+- `odoo-server` - Local Odoo server (192.168.100.64)
+- `petspot-desktop-root` - PetSpot desktop (192.168.1.2)
+- `petspot-home-hadayek` - PetSpot home (192.168.100.62)
+
+### Usage in IDEs
+
+The SSH config is automatically available in:
+- **Cursor** (Remote-SSH)
+- **VS Code** (Remote-SSH)
+- **JetBrains IDEs** (PyCharm, IntelliJ, etc.)
+- **Terminal** (`ssh smart-view`, `ssh alshmoukh`, etc.)
+
+### Updating SSH Config
+
+1. Edit the config:
+```bash
+vim ~/dotfiles/.ssh/config
+```
+
+2. Commit and push:
+```bash
+cd ~/dotfiles
+git add .ssh/config
+git commit -m "Update SSH config"
+git push
+```
+
+3. Pull on other machines:
+```bash
+cd ~/dotfiles
+git pull
+```
+
